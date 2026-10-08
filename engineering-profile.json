@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "profile": "godot-game",
+  "commands": {
+    "install": [
+      "make",
+      "install"
+    ],
+    "lint": [
+      "make",
+      "lint"
+    ],
+    "check": [
+      "make",
+      "check"
+    ],
+    "clean": [
+      "make",
+      "clean"
+    ],
+    "test": {
+      "unsupported": "Empty consumer fixture has no game scene, behavior suite, export presets or persistent development service; check validates engine import."
+    },
+    "build": {
+      "unsupported": "Empty consumer fixture has no game scene, behavior suite, export presets or persistent development service; check validates engine import."
+    },
+    "dev": {
+      "unsupported": "Empty consumer fixture has no game scene, behavior suite, export presets or persistent development service; check validates engine import."
+    },
+    "stop": {
+      "unsupported": "Empty consumer fixture has no game scene, behavior suite, export presets or persistent development service; check validates engine import."
+    }
+  }
+}
