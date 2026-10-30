@@ -1,0 +1,23 @@
+[tools]
+"python" = "3.13.11"
+"actionlint" = "1.7.12"
+
+[env]
+TOOLS_ROOT = "{{ get_env(name='TOOLS_ROOT', default=config_root ~ '/.ci-tools') }}"
+GOTOOLCHAIN = "local"
+PYTHONDONTWRITEBYTECODE = "1"
+
+[tasks."lint"]
+run = ["actionlint", "python3 scripts/check_fixture.py lint"]
+
+[tasks."unit"]
+run = ["python3 scripts/check_fixture.py unit"]
+
+[tasks."install"]
+run = ["python3 -c 'import os,runpy,sys;sys.argv=[\"godot-setup.py\",*sys.argv[1:]];runpy.run_path(os.environ[\"TOOLS_ROOT\"]+\"/helpers/godot-setup.py\",run_name=\"__main__\")' --version 4.7.2 --origin godot-builds --binary-checksum sha256:cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4 --root .artifacts/godot"]
+
+[tasks."test"]
+run = [{"task" = "unit"}]
+
+[tasks."check"]
+run = [{"task" = "install"}, {"task" = "lint"}, {"task" = "unit"}]
