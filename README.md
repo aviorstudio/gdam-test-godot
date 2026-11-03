@@ -1,4 +1,4 @@
-<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 0fa864de082d5dd14dbf31707b1497c8e345bca2c9d195221f82c04ac718b9fc -->
+<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 335107cf8b64b078b15cc033002f8c97ef32da68c3517ba3599b2b8cd710f46c -->
 
 # gdam Godot fixture
 
@@ -14,3 +14,7 @@ git -C .ci-tools checkout --detach f7e243524ce2aa29f299e4c79db33001f72f4a30
 ```
 
 Declared tests produce source evidence from the current verification session in `.artifacts/verification`.
+
+## Contributor task interface
+
+Contributor tool versions and task entry points live in the native Mise configuration. Use `mise run lint` for source checks, `mise run test` for the applicable behavioral tests, and `mise run check` for the complete supported gate. `mise run clean` removes declared generated outputs while preserving source, credentials and retained data. This package has no application development service.
