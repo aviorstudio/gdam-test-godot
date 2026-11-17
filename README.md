@@ -1,4 +1,4 @@
-<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 335107cf8b64b078b15cc033002f8c97ef32da68c3517ba3599b2b8cd710f46c -->
+<!-- Generated from private documentation source. Do not edit directly. Source SHA256: c036e59aa796af9945742be8eda2c1c66bf0aba7011294245857715d7950854f -->
 
 # gdam Godot fixture
 
@@ -10,7 +10,7 @@ For the shared engine installer, check out the reviewed helper source first:
 
 ```sh
 git clone https://github.com/nicodes/tools.git .ci-tools
-git -C .ci-tools checkout --detach f7e243524ce2aa29f299e4c79db33001f72f4a30
+git -C .ci-tools checkout --detach 71540eb673ebd47162de3b78bb6ffbf77605d2ab
 ```
 
 Declared tests produce source evidence from the current verification session in `.artifacts/verification`.
